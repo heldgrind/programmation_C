@@ -1,0 +1,16 @@
+# Bibliothèques
+* include <stdio.h>
+* include <math.h>
+
+# Références
+* https://docs.oracle.com/cd/E19253-01/819-6958/chp-typeopexpr-2/index.html
+* https://web.maths.unsw.edu.au/~lafaye/CCM/c/ctype.htm
+
+# Difficulté
+* Sur le triangle , il à été long de trouver les boucles à a ajouté
+* Sur variables.c, difficulté à comprendre et réaliser le programme
+
+# Commentaires
+* 
+* 
+
