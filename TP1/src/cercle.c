@@ -1,6 +1,15 @@
 #include <stdio.h>
 #include <math.h>//on importe la bibliothèque math pour utilser PI
 
+/******* Nom du programme : cercle.c  *********************************************************/
+
+/* Consignes :
+- Calcule l'aire et le périmètre d'un cercle
+- Aire : Utilisez une variable rayon : float ou double
+- Périmètre: Utilisez une variable rayon : float ou double
+
+*****************************************************************************************************/
+
 int main(){
     float R = 10;
     float aire = M_PI * R*R; //formule de l'air d'un cercle

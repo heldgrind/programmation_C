@@ -4,9 +4,7 @@
 
 /* Consignes :
 - Écrivez un programme opérateurs.c qui utilise deux variables suivantes:
-
 i. a = 16
-
 ii. b = 3
 - Testez les différents opérateurs arithmétiques et logiques.
 *****************************************************************************************************/

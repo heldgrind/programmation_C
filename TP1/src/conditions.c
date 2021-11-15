@@ -4,11 +4,8 @@
 /* Consignes :
 - Écrivez un programme conditions.c qui utilise les boucles (for, while ou do..while) et les branchements inconditionnels (break ou continue) 
 - Affichage de numéros <= 1000 qui sont divisible par:
-
 a. 2 et 15
-
 b. 103 ou 107
-
 c. 7 ou 5, mais pas par 3
 *****************************************************************************************************/
 
@@ -29,7 +26,7 @@ int main()
          
         }
 
-        if((compteur%7==0)|((compteur%5==0)))
+        if((compteur%7==0)||((compteur%5==0)))
         {
            /* if (compteur%3==0)
             {
@@ -43,16 +40,3 @@ int main()
 
  return 0;
 }
-
-
-
-/*Ecrivez un programme *conditions.c* qui utilise les boucles (**for**,
-**while** ou **do..while**) et les branchements inconditionnels (break
-ou continue) pour l'affichage de numéros <= 1000 qui sont divisible par
-:
-
-a.  2 et 15
-
-b.  103 ou 107
-
-c.  7 ou 5, mais pas par 3 */
