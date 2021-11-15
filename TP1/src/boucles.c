@@ -13,12 +13,18 @@ int main(){
     int a = 0;
     int i;
     
-    scanf("%d",&ligne); //ici on rentre la longueur de la boucl
-    for(a=0; a<=ligne; a++){ //on descend sur l'axe Y
-        for(i=0;i<=a;i++){ //on rajoute sur l"axe X pour fair un triangle
-            printf("*");
-        }
-        printf("\n");
+    scanf("%d",&ligne); //ici on rentre la longueur de la boucle
+    if (ligne<4)
+    {
+        printf("Mauvaise utilisation de la fonction,merci de rentrer un chiffre au dessus de 4\n") ; 
+    }
+    else{ 
+        for(a=0; a<=ligne; a++){ //on descend sur l'axe Y
+            for(i=0;i<=a;i++){ //on rajoute sur l"axe X pour fair un triangle
+                printf("*");
+            }
+            printf("\n");
 
+        }
     }
 }

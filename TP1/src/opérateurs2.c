@@ -28,6 +28,14 @@ switch(op){
     break;
     case '-' : resultat= num1-num2; //si char est =- alors on ajoute les deux variables
     break;
+    case'/' : resultat =num1/num2;
+    break;
+    case'%' : resultat =num1%num2;
+    break;
+    case'&' : resultat =num1&num2;
+    break;
+    case'|' : resultat =num1|num2;
+    break;
 }
 printf("le résultat est %d",resultat );
 }
