@@ -24,27 +24,25 @@ int i=0;
     printf("Entier :%d\n", *(tabentier+i));         // permet de tester la validé du code
     if (*(tabentier+i)>max)
        {
-
+           max=*(tabentier+i);
        }
        else{
            if(*(tabentier+i)<min)
            {
-               
+            min=*(tabentier+i);
            }
 
-
        }
-
- /*printf("rentrez un short ");
-    short  petit = 0;
-    scanf("%hd",&petit);
-    short *my_short_addr = &petit;
-    printf("short = %hd\n", *my_short_addr);
-    printf("adresse short = %p\n", my_short_addr);*/
-
-
-
     }
+      printf("Max :%d\n", *(tabentier+i));         // permet de tester la validé du code
+      printf("Min :%d\n", *(tabentier+i));         // permet de tester la validé du code
+/*
+      printf("rentrez un caractère ");
+    char caractere ='a';                 //initialisation du caractère
+    scanf("%c",&caractere);              //recuperation de la valeur rentrée par l'user et stockage à l'adresse de caractère
+    char *my_char_addr = &caractere;     // création du pointeur my_char_addr dont la valeur vaut l'adresse de la variable caractère
+    printf("char = %c\n", *my_char_addr);  // on affiche la valeur contenu dans my_char_addr grâce à un pointeur
+    printf("adresse char = %p\n", my_char_addr); // on affiche l'adresse de la valeur*/
 return 0;
 }
 
