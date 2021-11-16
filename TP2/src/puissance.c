@@ -14,12 +14,12 @@ int main()
 {
 
     // saisie donnée 1
-    printf("rentrez un entier");
+    printf("rentrez un entier ");
     int entier = 0;
     scanf("%d",&entier);
 
     // saisie donnée 2
-    printf("rentrez un second entier");
+    printf("rentrez un second entier ");
     int entier2 = 0;
     scanf("%d",&entier2);
 

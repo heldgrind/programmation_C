@@ -43,7 +43,7 @@ int main(){
     scanf("%Lf",&geant_v);
 
     // Affichage des différentes valeurs
-    printf("char = %c\n short = %hd\n int = %d\n long int = %ld\n long long int = %lld\n float = %f\n double = %lf\n, long double = %Lf\n"
+    printf("char = %c\n short = %hd\n int = %d\n long int = %ld\n long long int = %lld\n float = %f\n grand virgule = %lf\n, géant a virgule = %Lf\n"
     ,caractere,petit,entier,grand,geant,virgule,grand_v,geant_v);
 
 }

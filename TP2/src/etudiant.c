@@ -11,27 +11,36 @@
 
 
 int main(){
-int i;
+int i=0;
 
-char* etudiant[5]={""};
+char* etudiant_nom[5]={"a","b","c","d","e"};
+char* etudiant_prenom[5]={"v","w","x","y","z"};
+char* etudiant_adresse[5]={"aa","bb","cc","dd","ee"};
+int etudiant_noteprog[5]={1,2,3,4,5};
+int etudiant_notesys[5]={6,7,8,9,10};
 
+
+
+/*
+for(i=0;i<=5;i++){ 
 printf("entrer le nom :");
-scanf("%s",&etudiant[0]); 
+scanf("%s",etudiant_nom[i]); 
 
 printf("entrer le prenom :");
-scanf("%s",&etudiant[1]);
+scanf("%s",etudiant_prenom[i]);
 
 printf("rentrer l'adresse :");
-scanf("%s",&etudiant[2]);
+scanf("%s",etudiant_adresse[i]);
 
 printf("note de programmation :");
-scanf("%s",&etudiant[3]);
+scanf("%s",etudiant_noteprog[i]);
 
 printf("note de systeme");
-scanf("%s",&etudiant[4]);
+scanf("%s",etudiant_notesys[i]);
 
-for(i=0;i<=5;i++){ //on parcourt le tableau et on ressort l'information à la position i 
-    printf("%s ",&etudiant[i]);
+}*/
+for(i=0;i<=4;i++){
+    printf("élève %d %s %s habite a %s, note de prog : %d , note de sys : %d \n",i,etudiant_nom[i],etudiant_prenom[i],etudiant_adresse[i],etudiant_noteprog[i],etudiant_notesys[i]);
 }
 return 0;
 }

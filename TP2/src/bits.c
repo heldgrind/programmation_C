@@ -17,7 +17,7 @@ int main(){
         printf("la valeur est a 1 au 4ème et au 20 ème \n");
     }
     else{
-        printf("tu as tout faux");
+        printf("tu as tout faux\n");
     }
 
 

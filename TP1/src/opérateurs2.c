@@ -14,12 +14,12 @@ int main(){
 int num1 = 0;
 int num2 = 0;
 int resultat = 0;
-char op = '-';
+char op = '/';
 
-printf("rentré num1");
+printf("rentré num1 :");
 scanf("%d",&num1);
 
-printf("rentré num2");
+printf("rentré num2 :");
 scanf("%d",&num2);
 
 
@@ -37,5 +37,5 @@ switch(op){
     case'|' : resultat =num1|num2;
     break;
 }
-printf("le résultat est %d",resultat );
+printf("le résultat est :%d \n",resultat );
 }

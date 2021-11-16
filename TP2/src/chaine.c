@@ -32,7 +32,7 @@ printf("rentrez une chaine de caractère :");
         machaine[i]=copie[j];
     }
     
-    printf("la chaine concatener est %s",machaine);
+    printf("la chaine concatenée est %s \n",machaine);
     
 
 

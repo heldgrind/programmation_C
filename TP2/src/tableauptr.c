@@ -23,12 +23,12 @@ int i=0;
         *(tabfloat+i) = (float)rand()/RAND_MAX;//remplissage par un nombre aleatoire des cases du tableau une par une
         if ((i % 2) ==0)     //si l'indice est divisible par 2,
         {
-       /*  printf("Entier avant traitement :%d\n", *(tabentier+i));          permet de tester la validé du code
-         printf("Float avant traitement :%f\n", *(tabfloat+i));*/
+         printf("Entier avant traitement :%d\n", *(tabentier+i));         // permet de tester la validé du code
+         printf("Float avant traitement :%f\n", *(tabfloat+i));
         *(tabentier+i) = *(tabentier+i)*3 ; //on multiplie la valeur à cet indice par 3
         *(tabfloat+i) = *(tabfloat+i)*3 ; //on multiplie la valeur à cet indice par 3
-       /* printf("Entier après traitement : %d\n", *(tabentier+i));   permet de tester la validé du code
-        printf("Float après traitement :%f\n", *(tabfloat+i));*/
+        printf("Entier après traitement : %d\n", *(tabentier+i));   //permet de tester la validé du code
+        printf("Float après traitement :%f\n", *(tabfloat+i));
         }
     }
 return 0;
