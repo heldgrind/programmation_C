@@ -14,24 +14,23 @@
 int main(){
 
 int tabentier[100]; // création tableau d'entier
-int min =0;
-int max=0;
-
 int i=0;
- for (i = 0 ; i < sizeof(tabentier)/sizeof(*tabentier) ; i++)
+tabentier[0] = rand() % (400 + 1);  // initialisation du premier element pour min et max
+int min =tabentier[0];
+int max=tabentier[0];
+ for (i = 1 ; i < sizeof(tabentier)/sizeof(*tabentier) ; i++)
     {
-    *(tabentier+i) = rand() % (800 + 1);            // remplissage du tableau
+    *(tabentier+i) = rand() % (400 + 1);            // remplissage du tableau
     printf("Entier :%d\n", *(tabentier+i));         // permet de tester la validé du code
-    if (*(tabentier+i)>max)
+    if (*(tabentier+i)>max)                         // si l'entier courant est >max
        {
-           max=*(tabentier+i);
+           max=*(tabentier+i);                      // on remplace l'entier courant par max
        }
        else{
-           if(*(tabentier+i)<min)
+           if(*(tabentier+i)<min)                   // si l'entier courant <min
            {
-            min=*(tabentier+i);
+            min=*(tabentier+i);                     // on remplace la valeur de min par l'entier courant
            }
-
        }
     }
       printf("Max :%d\n", max);         // permet de tester la validé du code
