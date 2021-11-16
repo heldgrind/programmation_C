@@ -22,6 +22,25 @@ int i=0;
     {
     *(tabentier+i) = rand() % (100 + 1);            // remplissage du tableau
     printf("Entier :%d\n", *(tabentier+i));         // permet de tester la validé du code
+    if (*(tabentier+i)>max)
+       {
+
+       }
+       else{
+           if(*(tabentier+i)<min)
+           {
+               
+           }
+
+
+       }
+
+ /*printf("rentrez un short ");
+    short  petit = 0;
+    scanf("%hd",&petit);
+    short *my_short_addr = &petit;
+    printf("short = %hd\n", *my_short_addr);
+    printf("adresse short = %p\n", my_short_addr);*/
 
 
 
