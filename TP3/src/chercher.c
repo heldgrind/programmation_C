@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
 /******* Nom du programme : Chercher.c  *********************************************************/
 
@@ -15,7 +16,7 @@ int main(){
 int tabentier[100]; // création tableau d'entier
 int i=0;
 int j=0;
-char c[]= "Le chiffre n a pas été trouvé";
+bool trouve = false;
 
 
 // remplissage du tableau avec les 100 valeurs
@@ -30,18 +31,29 @@ int entier = 0;
 scanf("%d",&entier);
 
 
- while(j<sizeof(tabentier)/sizeof(*tabentier))
+ while(j<sizeof(tabentier)/sizeof(*tabentier)&trouve ==false)
      {
-         if (tabentier[i]==entier)
+         
+         if (tabentier[j]==entier)
           {
-            char c[]="Trouvé !\n";
+            trouve =true; // si le chiffre est trouvé on met trouve= true
           }
           else
            {
-            j=j+1;    
+            trouve=false;   
            }  
+           j=j+1;
      }
 
-printf("%s",c);
+
+    //affichage des resultats 
+if (trouve ==1 )
+{
+    printf("Entier présent\n") ;
+    }else{
+        printf("Entier non présent\n");
+    }
+
+
 return 0;
 }

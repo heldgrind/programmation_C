@@ -1,13 +1,16 @@
 # Bibliothèques
-* 
-*
+* #include <stdio.h>
+* #include <stdlib.h>
+* #include <stdbool.h>
+* #include <math.h>
+
 
 # Références
 * https://home.mis.u-picardie.fr/~furst/docs/2-Recherche-Tri.pdf
 *
 
 # Difficulté
-*
+* Adaptation algorithmique des  
 
 # Commentaires
 * 
