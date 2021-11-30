@@ -16,16 +16,34 @@ int main(){
     char tabphrase10[500]="Il ne nous aimait pas parce que nous gagnions de l'argent, et dans son optique prolétarienne le profit lui était insoutenable.";
     */
 
-    char phrase[]={"bonjour tu vas", "moi ça va" };
-    int j=0;
+    char phrase[]={"bonjour tu vas"};
+    int j,i;
     int trouve;
     char saisie[20];
+    char csaisie[20];
+    char cphrase[20];
     printf("saisir une phrase ");
-    fgets(saisie,20,stid);
-    
-    while(){
-
+    fgets(saisie,20,stdin);
+    for(int i=0;i<sizeof(phrase)/sizeof(*phrase);i++){
+         cphrase[i] = phrase[i];
+        printf("%c",cphrase[i]);
     }
-
+    for(int i=0;i<sizeof(saisie)/sizeof(*saisie);i++){
+         csaisie[i] = saisie[i];
+    }
+    for(i=0;i<20;i++){
+        if (cphrase[i] == csaisie[i]){
+        trouve=1;
+        }
+        else{
+            trouve=0;
+        }
+    }
+    if(trouve == 1){
+        printf("phrase pareil");
+    }
+    if(trouve == 0){
+        printf("phrase pas pareil");
+    }
 }  
     

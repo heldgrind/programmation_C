@@ -27,9 +27,9 @@ struct  RGBA_iter
 
 int main(){
 
-struct RGBA tabcouleur[10]; 
-struct RGBA_iter tabrgbaiter[10];
-bool trouve = false;
+struct RGBA tabcouleur[100]; 
+struct RGBA_iter tabrgbaiter[100];
+
 
 
 ///****************** Remplissage du tabeau******************************//
@@ -60,8 +60,7 @@ tabcouleur[5].alpha= 0x80;
 ///****************** Remplissage du tabeau2******************************//
 for (int i=0;i<sizeof(tabrgbaiter)/sizeof(*tabrgbaiter);i++) // parcours du nombre d'éléments
 { 
-tabrgbaiter[i].iteration=0; 
-//printf("  itération  %d\n", tabrgbaiter[i].iteration);  
+tabrgbaiter[i].iteration=0;  
 }
 ///*****************************************************************//
 
@@ -74,7 +73,8 @@ tabrgbaiter[0].monRGBA=tabcouleur[0] ;
  //si couleur trouvé parcours tableau tabrgbaiter et incrémente de 1 l'élément correspondant dans
 for (int r=1;r<sizeof(tabcouleur)/sizeof(*tabcouleur);r++) // parcours du nombre d'éléments
 {
-   
+   //  printf("couleur: %d,%d,%d,%d\n",tabcouleur[r].rouge,tabcouleur[r].bleu,tabcouleur[r].vert,tabcouleur[r].alpha);
+   bool trouve = false;
     for (int j=0;j<sizeof(tabrgbaiter)/sizeof(*tabrgbaiter);j++)
     {
             if(tabcouleur[r].rouge==tabrgbaiter[j].monRGBA.rouge & tabcouleur[r].bleu==tabrgbaiter[j].monRGBA.bleu & tabcouleur[r].vert==tabrgbaiter[j].monRGBA.vert & tabcouleur[r].alpha==tabrgbaiter[j].monRGBA.alpha)
@@ -82,22 +82,20 @@ for (int r=1;r<sizeof(tabcouleur)/sizeof(*tabcouleur);r++) // parcours du nombre
             tabrgbaiter[j].iteration=tabrgbaiter[j].iteration+1;
              trouve = true;
             }else{        
-                
             }
     }
 
-    if(trouve=true){
-
+    if(trouve==true){
     }else{
-
-    count =count+1;
-    printf("  itération  %d\n",count);
-    tabrgbaiter[count].iteration=tabrgbaiter[count].iteration+1;
-    tabrgbaiter[count].monRGBA.rouge=tabcouleur[r].rouge;
-    tabrgbaiter[count].monRGBA.rouge=tabcouleur[r].bleu;
-    tabrgbaiter[count].monRGBA.rouge=tabcouleur[r].vert;
-    tabrgbaiter[count].monRGBA.rouge=tabcouleur[r].alpha;
-    trouve=false;
+        if(trouve==false){
+            count =count+1;
+            tabrgbaiter[count].iteration=tabrgbaiter[count].iteration+1;
+            tabrgbaiter[count].monRGBA.rouge=tabcouleur[r].rouge;
+            tabrgbaiter[count].monRGBA.bleu=tabcouleur[r].bleu;
+            tabrgbaiter[count].monRGBA.vert=tabcouleur[r].vert;
+            tabrgbaiter[count].monRGBA.alpha=tabcouleur[r].alpha;
+        }else{
+        }
       }
 
       
@@ -108,8 +106,8 @@ for (int r=1;r<sizeof(tabcouleur)/sizeof(*tabcouleur);r++) // parcours du nombre
     {
         if(tabrgbaiter[j].iteration!=0) 
         {
-        printf("couleur: %d,%d,%d,%d",tabrgbaiter[j].monRGBA.rouge,tabrgbaiter[j].monRGBA.bleu,tabrgbaiter[j].monRGBA.vert,tabrgbaiter[j].monRGBA.alpha);
-        printf("  itération  %d\n", tabrgbaiter[j].iteration);
+             printf("0x%x 0x%x 0x%x 0x%x",tabrgbaiter[j].monRGBA.rouge,tabrgbaiter[j].monRGBA.bleu,tabrgbaiter[j].monRGBA.vert,tabrgbaiter[j].monRGBA.alpha);
+        printf(" %d\n", tabrgbaiter[j].iteration);
         }else{
 
         }
