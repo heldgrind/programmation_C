@@ -33,6 +33,8 @@ int main(){
     lire_fichier(nom_de_fichier);
 
     printf("\nentrer le texte pour le fichier");
+    int c;
+    while ((c = getchar()) != '\n' && c != EOF); // pour enlever \n laissé par scanf pour que fgets ne soit pas skip et ainsi vider stdin
     fgets(message,50,stdin);
 
     ecrire_dans_fichier(nom_de_fichier,message);
