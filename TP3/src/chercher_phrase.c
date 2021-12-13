@@ -1,6 +1,17 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include <stdbool.h>
+/******* Nom du programme : couleur_compteur.c  *********************************************************/
+
+/* Consignes :
+
+- Créer une structure de type couleur
+- Créer et initialiser un tableau de 100 couleurs
+- Affiche les couleurs et leurs nombre
+
+*****************************************************************************************************/
+
+
 
 int main(){
     /*
