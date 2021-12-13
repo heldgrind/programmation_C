@@ -3,24 +3,19 @@
 #include <string.h>
 #include "fichier.h"
 
-void lire_fichier(char *nom_de_fichier){
-    FILE* fichier = NULL;
-    char c;
-    fichier =fopen(nom_de_fichier,"r");
-    if (fichier == NULL){
-        printf("erreur ouverture");
-    }
-        while((c=fgetc(fichier))!=EOF){
-        printf("%c",c);
-    }
+/******* Nom du programme : chercherfichier.c  *********************************************************/
 
-    fclose(fichier);
-}
+/* Consignes : 
 
+ -  écrivez un fichier chercherfichier.c qui cherche une phrase dans un fichier, les deux sont à saisir par l'utilisateur
+ - doit afficher toutes les lignes de fichier où les mots sont présents et également le nombre de fois qu'ils sont présents
+ - exemple : $ ./chercherfichier int fichier.c   Ligne 10, 2 fois Ligne 30, 1 fois 
+
+*****************************************************************************************************/
 
 int main(int argc, char** argv)
 {
-
+// déclaration des variables
     FILE* fichier = NULL;
     char c;
     int nb_ligne_fich =0;
@@ -28,7 +23,7 @@ int main(int argc, char** argv)
     char tabcaracterefich[400][400];
     char tabcaractere[100] ;
     int nbcaracparligne[100] ;
-    char tabchaine[100] ;
+    char tabMotATester[100] ;
     
 
     //*************** lecture du fichier et remplissage du tableau a deux dimensions[j][nb_ligne] *********************///
@@ -47,38 +42,46 @@ int main(int argc, char** argv)
                 // on vérifie s'il s'agit d'un espace, si c'est le cas on ne le rentre pas dans le tableau
                  if(c!=' ')
                {
-                tabcaracterefich[j][nb_ligne_fich]= c; // CHIANT: je rempli des caracteres faudrait que je concatene deux chaines plutot, l'idée est de dire qu'a l'indice je met un mot, la ou pour le moment je rentre qu'un caractère et incremente j
+                tabcaracterefich[nb_ligne_fich][j]= c; // CHIANT: je rempli des caracteres faudrait que je concatene deux chaines plutot, l'idée est de dire qu'a l'indice je met un mot, la ou pour le moment je rentre qu'un caractère et incremente j
                  j++;
               }
             }
     }
 
+    //***************** Séparation caractère par caractère du mot a tester et stockage dans le tab tabMotATester   *****************//
+    for (int r=0; r<strlen(argv[1]);r++)
+    {
+        tabMotATester[r]=argv[1][r];
+        printf("%c\n",tabMotATester[r]);
+
+    }
+    //tabMotATester
+
     //********Parcours du tableau a deux dimensions précédemment rempli et comparaison au mot clé**************//
     for (int i=0; i<nb_ligne_fich;i++)
     {
-        printf("%d\n",nbcaracparligne[i]);
-        for(int k=0;k<nbcaracparligne[i];k++)
+        int count = 0;
+       // printf("%d",nbcaracparligne[i]);
+     // for(int k=0;k < strlen(tabcaracterefich[i]);k++)
+     for(int k=0;k <nbcaracparligne);k++)
         {
-            // parcours de tout les mots du tableau, si la longueur est la meme que  argv[1] on test le mot
-            // si égale, on incrément un compteur "trouvé"
-            
-            printf("%c",tabcaracterefich[k][i]);
+                            int trouve = 1;
+            for(int j=0;j < strlen(tabMotATester[i]);j++) {
+
+            if(tabMotATester[j]!=tabcaracterefich[i][k]) //si premiere lettre identique
+              {
+                  trouve = 0;
+                  break;
+              }
+            }
+            if(trouve) {
+              printf("trouvé\n");
+             count++;
+            }
         }
-
-        // si "trouvé" print f("Ligne"%d",%d" fois\n" compteur,nb_ligne_fich)
-        // sinon RIEN
-
+         printf("Ligne %d trouvé %d fois\n", i,count);
     }
-      /*   printf("%c",tabcaracterefich[0][0]);
-         printf("%c",tabcaracterefich[1][0]);
-         printf("%c",tabcaracterefich[2][0]);
-         printf("%c\n",tabcaracterefich[3][0]);
-         printf("%c",tabcaracterefich[1][1]);
-         printf("%c",tabcaracterefich[2][1]);
-         printf("%c",tabcaracterefich[3][1]);
-         printf("%c",tabcaracterefich[4][1]);
-         printf("%c",tabcaracterefich[5][1]);
-         printf("%c",tabcaracterefich[6][1]);*/
+
 
     fclose(fichier);
       return 0 ;  
