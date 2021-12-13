@@ -3,7 +3,14 @@
     "math.h": "c",
     "bitset": "c",
     "chrono": "c",
-    "algorithm": "c"
+    "algorithm": "c",
+    "array": "cpp",
+    "functional": "cpp",
+    "istream": "cpp",
+    "ostream": "cpp",
+    "tuple": "cpp",
+    "type_traits": "cpp",
+    "utility": "cpp"
   },
   "C_Cpp_Runner.cCompilerPath": "/usr/bin/gcc",
   "C_Cpp_Runner.cppCompilerPath": "/usr/bin/g++",
